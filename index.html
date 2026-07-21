@@ -13,8 +13,8 @@
     <title>Tech Urban</title>
 </head>
 
-<body class="bg-black p-8">
-    <header class="font-roboto flex justify-between items-center relative z-20 px-4 pb-12">
+<body class="">
+    <header class=" bg-black font-roboto flex justify-between items-center relative z-20 px-6 pb-12 pt-6">
         <div class="w-16">
             <img src="images-icons/logo.png">
         </div>
@@ -29,13 +29,15 @@
         </div>
     </header>
 
-    <section>
+    <section class="bg-black p-8">
         <div class="relative grid grid-cols-2 items-start">
             <div class="relative z-10 pt-24">
                 <h1 class="font-baloo text-[120px] text-white font-extrabold leading-none">tech urban</h1>
                 <h2 class="font-candara text-7xl italic text-bluesome leading-none -mt-8 mb-6 font-bold">conference</h2>
-                <p class="text-white text-[16px] font-montserrat mb-10">Lorem ipsum dolor sit amet consectetur. Lobortis ac<br> aliquet ultricies molestie ultrices diam tellus
-                    enim<br> purus. Ante laoreet congue porta diam malesuada.<br> Magna purus venenatis suspendisse vulputate
+                <p class="text-white text-[16px] font-montserrat mb-10">Lorem ipsum dolor sit amet consectetur. Lobortis
+                    ac<br> aliquet ultricies molestie ultrices diam tellus
+                    enim<br> purus. Ante laoreet congue porta diam malesuada.<br> Magna purus venenatis suspendisse
+                    vulputate
                     cursus<br> orci. Nulla gravida ligula eget pellentesque.
                 </p>
                 <p class="text-yellowsome text-3xl font-medium font-montserrat mb-4">connect. innovate. grow.</p>
@@ -62,7 +64,140 @@
         </div>
     </section>
 
-    
+    <section class="bg-yellowsome px-16 py-24 overflow-visible">
+        <div class="grid grid-cols-2 gap-16 items-start">
+
+            <!-- image stack: relative wrapper is what both images position against -->
+            <div class="relative mb-20">
+                <!-- background image (matrix code) — sits in normal flow, sets the overall size -->
+                <img src="images-icons/matrix.png"
+                    class="w-full max-w-sm rounded-2xl object-cover h-105 border-yellowsome" alt="">
+
+                <!-- foreground image (code editor) — pulled out of flow with absolute,
+                 then pushed down and right past the first image's edges using negative bottom/right -->
+                <img src="images-icons/code.png"
+                    class="absolute -bottom-48 -right-2 w-2/3 h-100 rounded-[48px] border-16 border-yellowsome object-cover "
+                    alt="">
+            </div>
+
+            <!-- text column -->
+            <div class="flex flex-col">
+
+                <!-- top group: no extra offset — this column already starts right beside the matrix image -->
+                <div class="flex flex-col gap-0 -ml-36">
+                    <h2 class="font-baloo text-6xl text-bluesome font-extrabold leading-none">About the event</h2>
+                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet consectetur.
+                        Lobortis ac
+                        aliquet <br>ultricies molestie ultrices diam tellus enim purus. Ante laoreet<br> congue porta
+                        diam
+                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla gravida ligula
+                        eget<br>
+                        pellentesque.
+                    </p>
+                </div>
+
+                <!-- bottom group: pushed right with pl-16, since the code editor image has spilled into this space by this point -->
+                <div class="flex flex-col gap-6 mt-12 -ml-10">
+                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet
+                        consectetur.<br> Lobortis ac
+                        aliquet ultricies molestie ultrices<br> diam tellus enim purus. Ante laoreet congue<br> porta
+                        diam
+                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla<br> gravida ligula
+                        eget
+                        pellentesque.
+                    </p>
+                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet
+                        consectetur.<br> Lobortis ac
+                        aliquet ultricies molestie ultrices<br> diam tellus enim purus. Ante laoreet congue<br> porta
+                        diam
+                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla<br> gravida ligula
+                        eget
+                        pellentesque.
+                    </p>
+
+                    <button
+                        class="bg-white text-bluesome font-bold rounded-full py-2 w-full max-w-xs mt-1">Register</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="grid grid-cols-3 bg-bluesome py-20 px-5">
+            <div class="border-r-2 border-white flex flex-col justify-center items-center">
+                <p class="text-6xl font-montserrat text-yellowsome font-bold">3,000+</p>
+                <p class="text-4xl font-baloo text-white font-bold">Attendees</p>
+            </div>
+            <div class="border-r-2 border-white flex flex-col justify-center items-center">
+                <p class="text-6xl font-montserrat text-yellowsome font-bold">11+</p>
+                <p class="text-4xl font-baloo text-white font-bold">Sponsors</p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-6xl font-montserrat text-yellowsome font-bold">43+</p>
+                <p class="text-4xl font-baloo text-white font-bold">Investors</p>
+            </div>
+
+        </div>
+
+        <div class="relative h-64 overflow-hidden">
+            <img src="images-icons/hackathons.png" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]" alt="">
+
+            <div class="absolute inset-0 bg-black/30"></div>
+
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+                Hackathons
+            </h2>
+        </div>
+
+
+        <div class="relative h-64 overflow-hidden">
+            <img src="images-icons/workshops.jpg" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]" alt="">
+
+            <div class="absolute inset-0 bg-black/30"></div>
+
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+                Workshops
+            </h2>
+        </div>
+
+        <div class="relative h-64 overflow-hidden">
+            <img src="images-icons/seminars.jpg" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]" alt="">
+
+            <div class="absolute inset-0 bg-black/30"></div>
+
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+                Seminars
+            </h2>
+        </div>
+
+        <div class="relative h-64 overflow-hidden">
+            <img src="images-icons/pitchsessions.png" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]" alt="">
+
+            <div class="absolute inset-0 bg-black/30"></div>
+
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+                Pitch Sessions
+            </h2>
+        </div>
+    </section>
+
+    <section class="p-6">
+        <h1 class="font-baloo text-bluesome text-6xl text-center font-bold">Sponsors</h1>
+        <div class="flex justify-between items-center p-10">
+            <img class="w-20" src="images-icons/northfaceicon.png">
+            <img class="w-20" src="images-icons/nasaicon.png">
+            <img class="w-20" src="images-icons/pepsiicon.png">
+            <img class="w-20" src="images-icons/dellicon.png">
+            <img class="w-20" src="images-icons/dominosicon.png">
+            <img class="w-20" src="images-icons/huaweiicon.png">
+            <img class="w-20" src="images-icons/mcdonaldsicon.png">
+            <img class="w-20" src="images-icons/randomcompanyicon.png">
+        </div>
+    </section>
 
 
 </body>
