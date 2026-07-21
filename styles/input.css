@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-baloo: "Baloo 2", cursive;
+  --font-moon: "Moon Dance", cursive;
+  --font-candara: Candara, sans-serif;
+
+  --color-bluesome: #0008CA;
+  --color-yellowsome: #ECA922;
+}
+
