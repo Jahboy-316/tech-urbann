@@ -14,42 +14,61 @@
 </head>
 
 <body class="">
-    <header class=" bg-black font-roboto flex justify-between items-center relative z-20 px-6 pb-12 pt-6">
+    <header class=" bg-black font-roboto flex justify-between items-center relative z-20 px-6 md:pb-12 pt-6">
         <div class="w-16">
             <img src="images-icons/logo.png">
         </div>
-        <nav class=" text-[16px] text-white flex justify-between gap-16">
+        <nav class="hidden md:flex text-[16px] text-white justify-between gap-16">
             <a href="#">Home</a>
             <a href="#">Gallery</a>
             <a href="blog.html">Blog</a>
             <a href="#">Contact us</a>
         </nav>
-        <div>
+        <button id="menuBtn" class="text-white text-3xl md:hidden">
+            ☰
+        </button>
+
+        <div class=" hidden md:block">
             <button class="text-bluesome rounded-3xl bg-yellowsome w-28 font-medium p-1">Register</button>
         </div>
     </header>
 
+    <div id="mobileMenu" class="hidden bg-black text-white  flex flex-col items-center gap-6 py-8 md:hidden">
+
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+
     <section class="bg-black p-8">
-        <div class="relative grid grid-cols-2 items-start">
-            <div class="relative z-10 pt-24">
-                <h1 class="font-baloo text-[120px] text-white font-extrabold leading-none">tech urban</h1>
-                <h2 class="font-candara text-7xl italic text-bluesome leading-none -mt-8 mb-6 font-bold">conference</h2>
-                <p class="text-white text-[16px] font-montserrat mb-10">Lorem ipsum dolor sit amet consectetur. Lobortis
-                    ac<br> aliquet ultricies molestie ultrices diam tellus
-                    enim<br> purus. Ante laoreet congue porta diam malesuada.<br> Magna purus venenatis suspendisse
+        <div class="relative grid grid-cols-1 md:grid-cols-2 items-start">
+            <div class="relative z-10 pt-6 md:pt-24 text-center md:text-left">
+                <h1 class="font-baloo text-6xl md:text-[120px] text-white font-extrabold leading-none">tech urban</h1>
+                <h2
+                    class="font-candara text-3xl md:text-7xl italic text-bluesome leading-none mt-2 md:-mt-8 mb-6 font-bold">
+                    conference</h2>
+                <p class="text-white text-base leading-7 max-w-xl font-montserrat mb-10">Lorem ipsum dolor sit amet
+                    consectetur. Lobortis
+                    ac aliquet ultricies molestie ultrices diam tellus
+                    enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
                     vulputate
-                    cursus<br> orci. Nulla gravida ligula eget pellentesque.
+                    cursus orci. Nulla gravida ligula eget pellentesque.
                 </p>
-                <p class="text-yellowsome text-3xl font-medium font-montserrat mb-4">connect. innovate. grow.</p>
-                <div class="flex items-center gap-3 mb-6">
+                <p class="text-yellowsome text-xl md:text-3xl font-medium font-montserrat mb-4">connect. innovate. grow.
+                </p>
+                <div class="flex justify-center md:justify-start gap-3 mb-6">
                     <img class="w-8" src="images-icons/calendarIcon.png">
-                    <p class="font-moon text-white text-3xl">march 2024</p>
+                    <p class="font-moon text-white text-2xl md:text-3xl">march 2024</p>
                 </div>
-                <button class="text-bluesome rounded-3xl bg-yellowsome w-28 font-medium p-1">Register</button>
+                <button
+                    class="text-bluesome rounded-3xl bg-yellowsome w-full max-w-xs md:w-28 font-medium p-1">Register</button>
             </div>
 
-            <div class="relative flex justify-end -mt-32">
-                <img class="object-right w-full h-220 brightness-110 contrast-105" src="images-icons/heroImage.png">
+            <div
+                class=" absolute inset-0 md:relative flex justify-center mt-8 md:justify-end md:-mt-32 opacity-60 md:opacity-100">
+                <img class=" w-full h-full object-cover md:h-220 " src="images-icons/heroImage.png">
                 <div
                     class="absolute inset-0 bg-linear-to-r from-black from-0% via-black/30 via-15% to-transparent to-30%">
                 </div>
@@ -57,17 +76,17 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center items-center gap-3">
+        <div class="flex justify-center items-center gap-3 pt-4">
             <button class="dot rounded-full w-4 h-4 bg-bluesome"></button>
             <button class="dot rounded-full w-4 h-4 bg-white"></button>
             <button class="dot rounded-full w-4 h-4 bg-white"></button>
         </div>
     </section>
 
-    <section class="bg-yellowsome px-16 py-24 overflow-visible">
-        <div class="grid grid-cols-2 gap-16 items-start">
+    <section class="bg-yellowsome px-4 py-8 md:px-16 md:py-24 md:overflow-visible">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-            <div class="relative mb-20">
+            <div class=" hidden md:block relative mb-20">
                 <img src="images-icons/matrix.png"
                     class="w-full max-w-sm rounded-2xl object-cover h-105 border-yellowsome" alt="">
 
@@ -76,40 +95,52 @@
                     alt="">
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
 
-                <div class="flex flex-col gap-0 -ml-36">
-                    <h2 class="font-baloo text-6xl text-bluesome font-extrabold leading-none">About the event</h2>
-                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet consectetur.
-                        Lobortis ac
-                        aliquet <br>ultricies molestie ultrices diam tellus enim purus. Ante laoreet<br> congue porta
-                        diam
-                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla gravida ligula
-                        eget<br>
-                        pellentesque.
-                    </p>
+                <div class="flex flex-col gap-0  md:-ml-36">
+                    <h2
+                        class="font-baloo text-4xl md:text-6xl text-bluesome font-extrabold leading-none sm:text-center ">
+                        About the
+                        event</h2>
+                    <div class="border-t border-bluesome pt-2 mt-4 md:border-t-0 md:pt-0 md:mt-0">
+                        <p class="text-black text-lg leading-8 font-montserrat max-w-xl mx-auto md:mx-0">Lorem ipsum
+                            dolor sit amet consectetur.
+                            Lobortis ac
+                            aliquet ultricies molestie ultrices diam tellus enim purus. Ante laoreet congue porta
+                            diam
+                            malesuada. Magna purus venenatis suspendisse vulputate cursus orci. Nulla gravida ligula
+                            eget
+                            pellentesque.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="flex flex-col gap-6 mt-12 -ml-10">
-                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet
-                        consectetur.<br> Lobortis ac
-                        aliquet ultricies molestie ultrices<br> diam tellus enim purus. Ante laoreet congue<br> porta
-                        diam
-                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla<br> gravida ligula
-                        eget
-                        pellentesque.
-                    </p>
-                    <p class="text-black text-lg leading-snug font-montserrat">Lorem ipsum dolor sit amet
-                        consectetur.<br> Lobortis ac
-                        aliquet ultricies molestie ultrices<br> diam tellus enim purus. Ante laoreet congue<br> porta
-                        diam
-                        malesuada. Magna purus venenatis<br> suspendisse vulputate cursus orci. Nulla<br> gravida ligula
-                        eget
-                        pellentesque.
-                    </p>
-
+                <div class="flex flex-col gap-8 mt-12 ml-0 md:-ml-10">
+                    <div class="border-t border-bluesome pt-2 mt-4 md:border-t-0 md:pt-0 md:mt-0">
+                        <p class="text-black text-lg leading-8 font-montserrat max-w-xl mx-auto md:mx-0">Lorem ipsum
+                            dolor sit amet consectetur.
+                            Lobortis ac
+                            aliquet ultricies molestie ultrices diam tellus enim purus. Ante laoreet congue porta
+                            diam
+                            malesuada. Magna purus venenatis suspendisse vulputate cursus orci. Nulla gravida ligula
+                            eget
+                            pellentesque.
+                        </p>
+                    </div>
+                    <div class="border-t border-bluesome pt-2 mt-4 md:border-t-0 md:pt-0 md:mt-0">
+                        <p class="text-black text-lg leading-8 font-montserrat max-w-xl mx-auto md:mx-0">Lorem ipsum
+                            dolor sit amet consectetur.
+                            Lobortis ac
+                            aliquet ultricies molestie ultrices diam tellus enim purus. Ante laoreet congue porta
+                            diam
+                            malesuada. Magna purus venenatis suspendisse vulputate cursus orci. Nulla gravida ligula
+                            eget
+                            pellentesque.
+                        </p>
+                    </div>
                     <button
-                        class="bg-white text-bluesome font-bold rounded-full py-2 w-full max-w-xs mt-1">Register</button>
+                        class="bg-white text-bluesome font-bold rounded-full py-2 w-full max-w-xs mt-1 mx-auto md:mx-0">Register</button>
                 </div>
 
             </div>
@@ -120,164 +151,194 @@
     </section>
 
     <section>
-        <div class="grid grid-cols-3 bg-bluesome py-20 px-5">
-            <div class="border-r-2 border-white flex flex-col justify-center items-center">
-                <p class="text-6xl font-montserrat text-yellowsome font-bold">3,000+</p>
-                <p class="text-4xl font-baloo text-white font-bold">Attendees</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 bg-bluesome py-10 md:py-20 px-5 gap-8 md:gap-12">
+            <div
+                class="border-b-2 md:border-b-0 md:border-r-2 border-white flex flex-col justify-center items-center text-center">
+                <p class="text-4xl md:text-6xl font-montserrat text-yellowsome font-bold">3,000+</p>
+                <p class="text-2xl md:text-4xl font-baloo text-white font-bold pb-4">Attendees</p>
             </div>
-            <div class="border-r-2 border-white flex flex-col justify-center items-center">
-                <p class="text-6xl font-montserrat text-yellowsome font-bold">11+</p>
-                <p class="text-4xl font-baloo text-white font-bold">Sponsors</p>
+            <div
+                class="border-b-2 md:border-b-0 md:border-r-2 border-white flex flex-col justify-center items-center text-center">
+                <p class="text-4xl md:text-6xl font-montserrat text-yellowsome font-bold">11+</p>
+                <p class=" text-2xl md:text-4xl font-baloo text-white font-bold pb-4">Sponsors</p>
             </div>
-            <div class="flex flex-col justify-center items-center">
-                <p class="text-6xl font-montserrat text-yellowsome font-bold">43+</p>
-                <p class="text-4xl font-baloo text-white font-bold">Investors</p>
+            <div class="flex flex-col justify-center items-center text-center">
+                <p class="text-4xl md:text-6xl font-montserrat text-yellowsome font-bold">43+</p>
+                <p class="text-2xl md:text-4xl font-baloo text-white font-bold">Investors</p>
             </div>
 
         </div>
 
-        <div class="relative h-64 overflow-hidden">
+        <div class="relative h-52 md:h-64 overflow-hidden">
             <img src="images-icons/hackathons.png" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]"
                 alt="">
 
             <div class="absolute inset-0 bg-black/30"></div>
 
-            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-4xl md:text-6xl font-bold text-white">
                 Hackathons
             </h2>
         </div>
 
 
-        <div class="relative h-64 overflow-hidden">
+        <div class="relative h-52 md:h-64 overflow-hidden">
             <img src="images-icons/workshops.jpg" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]"
                 alt="">
 
             <div class="absolute inset-0 bg-black/30"></div>
 
-            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-4xl md:text-6xl font-bold text-white">
                 Workshops
             </h2>
         </div>
 
-        <div class="relative h-64 overflow-hidden">
+        <div class="relative h-52 md:h-64 overflow-hidden">
             <img src="images-icons/seminars.jpg" class="absolute inset-0 w-full h-full object-cover object-[50%_22%]"
                 alt="">
 
             <div class="absolute inset-0 bg-black/30"></div>
 
-            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-4xl md:text-6xl font-bold text-white">
                 Seminars
             </h2>
         </div>
 
-        <div class="relative h-64 overflow-hidden">
+        <div class="relative h-52 md:h-64 overflow-hidden">
             <img src="images-icons/pitchsessions.png"
                 class="absolute inset-0 w-full h-full object-cover object-[50%_22%]" alt="">
 
             <div class="absolute inset-0 bg-black/30"></div>
 
-            <h2 class=" font-baloo absolute bottom-2 left-6 text-6xl font-bold text-white">
+            <h2 class=" font-baloo absolute bottom-2 left-6 text-4xl md:text-6xl font-bold text-white">
                 Pitch Sessions
             </h2>
         </div>
     </section>
 
     <section class="p-6">
-        <h1 class="font-baloo text-bluesome text-6xl text-center font-bold">Sponsors</h1>
-        <div class="flex justify-between items-center p-10">
-            <img class="w-20" src="images-icons/northfaceicon.png">
-            <img class="w-20" src="images-icons/nasaicon.png">
-            <img class="w-20" src="images-icons/pepsiicon.png">
-            <img class="w-20" src="images-icons/dellicon.png">
-            <img class="w-20" src="images-icons/dominosicon.png">
-            <img class="w-20" src="images-icons/huaweiicon.png">
-            <img class="w-20" src="images-icons/mcdonaldsicon.png">
-            <img class="w-20" src="images-icons/randomcompanyicon.png">
+        <h1 class="font-baloo text-bluesome text-4xl md:text-6xl text-center font-bold">Sponsors</h1>
+        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 p-6 md:p-10">
+            <img class="w-14 md:w-20" src="images-icons/northfaceicon.png">
+            <img class="w-14 md:w-20" src="images-icons/nasaicon.png">
+            <img class="w-14 md:w-20" src="images-icons/pepsiicon.png">
+            <img class="w-14 md:w-20" src="images-icons/dellicon.png">
+            <img class="w-14 md:w-20" src="images-icons/dominosicon.png">
+            <img class="w-14 md:w-20" src="images-icons/huaweiicon.png">
+            <img class="w-14 md:w-20" src="images-icons/mcdonaldsicon.png">
+            <img class="w-14 md:w-20" src="images-icons/randomcompanyicon.png">
         </div>
     </section>
 
-    <section class=" bg-black relative py-16 ">
+    <section class=" bg-black relative py-12 md:py-16 ">
         <div class="relative flex flex-col items-center">
-            <h1 class="font-baloo text-5xl text-bluesome font-medium text-center">What People are saying<br> about the
+            <h1 class="font-baloo text-3xl md:text-5xl text-bluesome font-medium text-center max-w-lg mx-auto">What
+                People are saying<br> about the
                 Event</h1>
 
-            <div class="py-6 text-center flex flex-col gap-4">
-                <p class="text-white text-lg font-montserrat tracking-wide">
-                    Lorem ipsum dolor sit amet consectetur. Lobortis<br> ac aliquet ultricies molestie ultrices diam
-                    tellus<br>
-                    enim purus. Ante laoreet congue porta diam<br> malesuada. Magna purus venenatis suspendisse<br>
+            <div
+                class="bg-white/10 md:bg-transparent md:rounded-none rounded-2xl max-w-xl mx-auto py-5 md:py-6 text-center flex flex-col gap-4 my-5">
+                <p class="text-white text-base md:text-lg font-montserrat tracking-wide max-w-md">
+                    Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                    tellus
+                    enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
                     vulputate
-                    cursus orci. Nulla gravida ligula eget<br> pellentesque.
+                    cursus orci. Nulla gravida ligula eget pellentesque.
                 </p>
                 <h3 class="font-baloo text-2xl font-bold text-yellowsome">John Doe</h3>
             </div>
-            <div class="py-6 text-center flex flex-col gap-4">
-                <p class="text-white text-lg font-montserrat tracking-wide">
-                    Lorem ipsum dolor sit amet consectetur. Lobortis<br> ac aliquet ultricies molestie ultrices diam
-                    tellus<br>
-                    enim purus. Ante laoreet congue porta diam<br> malesuada. Magna purus venenatis suspendisse<br>
+            <div
+                class="bg-white/10 md:bg-transparent md:rounded-none rounded-2xl max-w-xl mx-auto py-5 md:py-6 text-center flex flex-col gap-4 mb-5">
+                <p class="text-white text-base md:text-lg font-montserrat tracking-wide max-w-md">
+                    Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                    tellus
+                    enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
                     vulputate
-                    cursus orci. Nulla gravida ligula eget<br> pellentesque.
+                    cursus orci. Nulla gravida ligula eget pellentesque.
                 </p>
                 <h3 class="font-baloo text-2xl font-bold text-yellowsome">John Doe</h3>
             </div>
-            <div class="py-6 text-center flex flex-col gap-4">
-                <p class="text-white text-lg font-montserrat tracking-wide">
-                    Lorem ipsum dolor sit amet consectetur. Lobortis<br> ac aliquet ultricies molestie ultrices diam
-                    tellus<br>
-                    enim purus. Ante laoreet congue porta diam<br> malesuada. Magna purus venenatis suspendisse<br>
+            <div
+                class="bg-white/10 md:bg-transparent md:rounded-none rounded-2xl max-w-xl mx-auto py-5 md:py-6 text-center flex flex-col gap-4">
+                <p class="text-white text-base md:text-lg font-montserrat tracking-wide max-w-md">
+                    Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                    tellus
+                    enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
                     vulputate
-                    cursus orci. Nulla gravida ligula eget<br> pellentesque.
+                    cursus orci. Nulla gravida ligula eget pellentesque.
                 </p>
                 <h3 class="font-baloo text-2xl font-bold text-yellowsome">John Doe</h3>
             </div>
 
-            <div class="absolute top-[-10%] left-[5%]">
+            <div class=" hidden md:block absolute top-[-10%] left-[5%]">
                 <img class="w-140" src="images-icons/circless1.png">
             </div>
-            <div class="absolute top-[35%] right-[1%]">
+            <div class="hidden md:block absolute top-[35%] right-[1%]">
                 <img class="w-80" src="images-icons/circlesss2.png">
             </div>
-            <div class="absolute bottom-[1%] left-[5%]">
+            <div class=" hidden md:block absolute bottom-[1%] left-[5%]">
                 <img class="w-30" src="images-icons/circlessss3.png">
             </div>
 
         </div>
     </section>
 
-    <section class="relative py-24 bg-cover bg-center px-10"
-        style="background-image: url('images-icons/lightbulb-bg.png'); ">
-        <div class="grid grid-cols-2 gap-6 justify-items-center">
-            <div class="bg-white rounded-tr-[300px] rounded-bl-[300px] flex items-center flex-col h-200 w-140">
-                <div>
-                    <img class="w-140 h-90" src="images-icons/cardimage1.png">
+    <section class="relative py-12 md:py-24 bg-cover bg-center px-6 md:px-10"
+        style="background-image: url('images-icons/lightbulb-bg.png');">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6 justify-items-center">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white rounded-tr-[250px] rounded-bl-none md:rounded-tr-[300px] md:rounded-bl-[300px] flex items-center flex-col h-auto md:h-200 w-full md:w-140 overflow-hidden">
+
+                <div class="w-full">
+                    <img class="w-full h-64 md:w-140 md:h-90 object-cover" src="images-icons/cardimage1.png"
+                        alt="Tech Today">
                 </div>
-                <div class="text-left -ml-32">
-                    <h1 class="font-baloo text-4xl text-black font-bold mt-5 text-shadow-lg">Tech Today</h1>
-                    <p class="font-montserrat text-2xl text-bluesome mt-6">Lorem ipsum dolor sit amet<br> consectetur.
-                        Lobortis ac<br> aliquet ultricies molestie<br> ultrices diam tellus
-                        enim<br> purus.
+
+                <div class="text-center md:text-left ml-0 md:-ml-32 md:max-w-xs px-6 md:px-0">
+                    <h1 class="font-baloo text-3xl md:text-4xl text-black font-bold mt-5 text-shadow-lg">
+                        Tech Today
+                    </h1>
+                    <p class="font-montserrat text-lg md:text-2xl text-bluesome mt-6 leading-8">
+                        Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                        tellus enim purus.
                     </p>
                 </div>
-                <div class="mt-24 -mr-48">
-                    <a class="font-montserrat bg-bluesome text-white py-1 px-5 text-2xl" href="#">Keep Reading...</a>
+
+                <div class="mt-8 mb-8 md:mt-24 md:-mr-48">
+                    <a class="font-montserrat bg-bluesome text-white py-2 md:py-1 px-5 text-lg md:text-2xl inline-block"
+                        href="#">
+                        Keep Reading...
+                    </a>
                 </div>
 
             </div>
 
-            <div class="bg-white rounded-tl-[300px] rounded-br-[300px] flex items-center flex-col h-200 w-140">
-                <div>
-                    <img class="w-140 h-90" src="images-icons/cardimage2.png">
+            <!-- Card 2 -->
+            <div
+                class="bg-white rounded-tl-[250px] rounded-br-none md:rounded-tl-[300px] md:rounded-br-[300px] flex items-center flex-col h-auto md:h-200 w-full md:w-140 overflow-hidden">
+
+                <div class="w-full">
+                    <img class="w-full h-64 md:w-140 md:h-90 object-cover" src="images-icons/cardimage2.png"
+                        alt="Tech Today">
                 </div>
-                <div class="text-left -ml-32">
-                    <h1 class="font-baloo text-4xl text-black font-bold mt-5 text-shadow-lg">Tech Today</h1>
-                    <p class="font-montserrat text-2xl text-bluesome mt-6">Lorem ipsum dolor sit amet<br> consectetur.
-                        Lobortis ac<br> aliquet ultricies molestie<br> ultrices diam tellus
-                        enim<br> purus.
+
+                <div class="text-center md:text-left ml-0 md:-ml-32 md:max-w-xs px-6 md:px-0">
+                    <h1 class="font-baloo text-3xl md:text-4xl text-black font-bold mt-5 text-shadow-lg">
+                        Tech Today
+                    </h1>
+                    <p class="font-montserrat text-lg md:text-2xl text-bluesome mt-6 leading-8">
+                        Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                        tellus enim purus.
                     </p>
                 </div>
-                <div class="mt-24 mr-48">
-                    <a class="font-montserrat bg-bluesome text-white py-1 px-5 text-2xl" href="#">Keep Reading...</a>
+
+                <div class="mt-8 mb-8 md:mt-24 md:mr-48">
+                    <a class="font-montserrat bg-bluesome text-white py-2 md:py-1 px-5 text-lg md:text-2xl inline-block"
+                        href="#">
+                        Keep Reading...
+                    </a>
                 </div>
 
             </div>
@@ -286,122 +347,154 @@
 
     </section>
 
-    <section class="my-10">
-        <h1 class="font-baloo text-bluesome text-6xl  ml-24 font-bold text-left">Speakers</h1>
+    <section class="my-10 px-4 md:px-0">
+
+        <h1 class="font-baloo text-bluesome text-4xl md:text-6xl px-4 md:ml-28 font-bold text-center md:text-left">
+            Speakers
+        </h1>
+
         <div class="flex items-center justify-center mt-5">
-            <div class="bg-[#f4f4f4] w-[85%] h-6"></div>
+            <div class="bg-[#f4f4f4] w-[90%] md:w-[85%] h-4 md:h-6"></div>
         </div>
-        <div class="flex flex-col gap-10">
-            <div class="flex mt-10 mx-28">
-                <div class="relative w-90 h-90 shrink-0">
-                    <img class="w-72.5 absolute inset-7" src="images-icons/profile1.png">
-                    <img class="w-86.75 absolute inset-0" src="images-icons/ellipse3.png">
-                </div>
-                <div class=" flex-1 ml-16">
-                    <h2 class="text-4xl font-baloo font-extrabold text-bluesome mb-5">John Doe</h2>
-                    <p class="font-montserrat text-lg tracking-wide text-black">Lorem ipsum dolor sit amet consectetur.
-                        Lobortis ac aliquet<br> ultricies molestie ultrices diam tellus
-                        enim purus. Ante laoreet<br> congue porta diam malesuada. Magna purus venenatis<br> suspendisse
-                        vulputate
-                        cursus orci. Nulla gravida ligula eget<br> pellentesque.
-                    </p>
-                    <div class="flex justify-items-start items-center gap-2 mt-3">
-                        <img class="w-6  h-6" src="images-icons/youtubeicon2.png">
-                        <img class="w-6  h-6" src="images-icons/facebookicon.png">
-                        <img class="w-6  h-6" src="images-icons/twittericon.png">
-                        <img class="w-6  h-6" src="images-icons/instagramicon.png">
-                        <img class="w-6  h-6" src="images-icons/linkedinicon.png">
-                    </div>
 
+        <div class="flex flex-col gap-16 md:gap-10 mt-10">
+
+            <div class="flex flex-col md:flex-row items-center md:items-start mx-auto md:mx-28 max-w-5xl">
+
+                <div class="relative w-64 h-64 md:w-80 md:h-80 shrink-0 flex items-center justify-center">
+                    <img class="w-[80%] absolute" src="images-icons/profile1.png" alt="John Doe Profile">
+                    <img class="w-full absolute inset-0" src="images-icons/ellipse3.png" alt="Profile Frame">
                 </div>
+
+                <div class="flex-1 ml-0 md:ml-16 mt-6 md:mt-0 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-baloo font-extrabold text-bluesome mb-3 md:mb-5">John Doe</h2>
+
+                    <p class="font-montserrat text-base md:text-lg tracking-wide text-black leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                        tellus enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
+                        vulputate cursus orci. Nulla gravida ligula eget pellentesque.
+                    </p>
+
+                    <div class="flex justify-center md:justify-start items-center gap-3 mt-4">
+                        <img class="w-6 h-6" src="images-icons/youtubeicon2.png" alt="YouTube">
+                        <img class="w-6 h-6" src="images-icons/facebookicon.png" alt="Facebook">
+                        <img class="w-6 h-6" src="images-icons/twittericon.png" alt="Twitter">
+                        <img class="w-6 h-6" src="images-icons/instagramicon.png" alt="Instagram">
+                        <img class="w-6 h-6" src="images-icons/linkedinicon.png" alt="LinkedIn">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="flex mt-10 mx-28">
-                <div class="relative w-90 h-90 shrink-0">
-                    <img class="w-72.5 absolute inset-7" src="images-icons/profile2.png">
-                    <img class="w-86.75 absolute inset-0" src="images-icons/ellipse2.png">
-                </div>
-                <div class=" flex-1 ml-16">
-                    <h2 class="text-4xl font-baloo font-extrabold text-bluesome mb-5">John Doe</h2>
-                    <p class="font-montserrat text-lg tracking-wide text-black">Lorem ipsum dolor sit amet consectetur.
-                        Lobortis ac aliquet<br> ultricies molestie ultrices diam tellus
-                        enim purus. Ante laoreet<br> congue porta diam malesuada. Magna purus venenatis<br> suspendisse
-                        vulputate
-                        cursus orci. Nulla gravida ligula eget<br> pellentesque.
-                    </p>
-                    <div class="flex justify-items-start items-center gap-2 mt-3">
-                        <img class="w-6  h-6" src="images-icons/youtubeicon2.png">
-                        <img class="w-6  h-6" src="images-icons/facebookicon.png">
-                        <img class="w-6  h-6" src="images-icons/twittericon.png">
-                        <img class="w-6  h-6" src="images-icons/instagramicon.png">
-                        <img class="w-6  h-6" src="images-icons/linkedinicon.png">
-                    </div>
+            <div class="flex flex-col md:flex-row items-center md:items-start mx-auto md:mx-28 max-w-5xl">
 
+                <div class="relative w-64 h-64 md:w-80 md:h-80 shrink-0 flex items-center justify-center">
+                    <img class="w-[80%] absolute" src="images-icons/profile2.png" alt="John Doe Profile">
+                    <img class="w-full absolute inset-0" src="images-icons/ellipse2.png" alt="Profile Frame">
                 </div>
+
+                <div class="flex-1 ml-0 md:ml-16 mt-6 md:mt-0 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-baloo font-extrabold text-bluesome mb-3 md:mb-5">John Doe</h2>
+
+                    <p class="font-montserrat text-base md:text-lg tracking-wide text-black leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                        tellus enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
+                        vulputate cursus orci. Nulla gravida ligula eget pellentesque.
+                    </p>
+
+                    <div class="flex justify-center md:justify-start items-center gap-3 mt-4">
+                        <img class="w-6 h-6" src="images-icons/youtubeicon2.png" alt="YouTube">
+                        <img class="w-6 h-6" src="images-icons/facebookicon.png" alt="Facebook">
+                        <img class="w-6 h-6" src="images-icons/twittericon.png" alt="Twitter">
+                        <img class="w-6 h-6" src="images-icons/instagramicon.png" alt="Instagram">
+                        <img class="w-6 h-6" src="images-icons/linkedinicon.png" alt="LinkedIn">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="flex mt-10 mx-28">
-                <div class="relative w-90 h-90 shrink-0">
-                    <img class="w-72.5 absolute inset-7" src="images-icons/profile3.png">
-                    <img class="w-86.75 absolute inset-0" src="images-icons/ellipse3.png">
-                </div>
-                <div class=" flex-1 ml-16">
-                    <h2 class="text-4xl font-baloo font-extrabold text-bluesome mb-5">John Doe</h2>
-                    <p class="font-montserrat text-lg tracking-wide text-black">Lorem ipsum dolor sit amet consectetur.
-                        Lobortis ac aliquet<br> ultricies molestie ultrices diam tellus
-                        enim purus. Ante laoreet<br> congue porta diam malesuada. Magna purus venenatis<br> suspendisse
-                        vulputate
-                        cursus orci. Nulla gravida ligula eget<br> pellentesque.
-                    </p>
-                    <div class="flex justify-items-start items-center gap-2 mt-3">
-                        <img class="w-6  h-6" src="images-icons/youtubeicon2.png">
-                        <img class="w-6  h-6" src="images-icons/facebookicon.png">
-                        <img class="w-6  h-6" src="images-icons/twittericon.png">
-                        <img class="w-6  h-6" src="images-icons/instagramicon.png">
-                        <img class="w-6  h-6" src="images-icons/linkedinicon.png">
-                    </div>
+            <div class="flex flex-col md:flex-row items-center md:items-start mx-auto md:mx-28 max-w-5xl">
 
+                <div class="relative w-64 h-64 md:w-80 md:h-80 shrink-0 flex items-center justify-center">
+                    <img class="w-[80%] absolute" src="images-icons/profile3.png" alt="John Doe Profile">
+                    <img class="w-full absolute inset-0" src="images-icons/ellipse3.png" alt="Profile Frame">
                 </div>
+
+                <div class="flex-1 ml-0 md:ml-16 mt-6 md:mt-0 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-baloo font-extrabold text-bluesome mb-3 md:mb-5">John Doe</h2>
+
+                    <p class="font-montserrat text-base md:text-lg tracking-wide text-black leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur. Lobortis ac aliquet ultricies molestie ultrices diam
+                        tellus enim purus. Ante laoreet congue porta diam malesuada. Magna purus venenatis suspendisse
+                        vulputate cursus orci. Nulla gravida ligula eget pellentesque.
+                    </p>
+
+                    <div class="flex justify-center md:justify-start items-center gap-3 mt-4">
+                        <img class="w-6 h-6" src="images-icons/youtubeicon2.png" alt="YouTube">
+                        <img class="w-6 h-6" src="images-icons/facebookicon.png" alt="Facebook">
+                        <img class="w-6 h-6" src="images-icons/twittericon.png" alt="Twitter">
+                        <img class="w-6 h-6" src="images-icons/instagramicon.png" alt="Instagram">
+                        <img class="w-6 h-6" src="images-icons/linkedinicon.png" alt="LinkedIn">
+                    </div>
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
-    <footer class="bg-black py-10 px-6">
-        <div class="flex items-center justify-start">
-            <img class="w-16" src="images-icons/logo.png">
-            <h1 class="text-6xl font-baloo font-bold text-white">tech urban</h1>
-        </div>
-        <p class="text-lg font-montserrat ml-16 text-yellowsome">Connect. Innovate. Grow</p>
+    <footer class="bg-black py-10 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
 
-        <div class="flex justify-center mt-8">
-            <p class="text-base font-montserrat text-gray-400">© 2023 Tech Urban Conference. All rights reserved.</p>
-        </div>
-
-        <div class="flex justify-end -mt-36">
-
-            <div class="grid grid-cols-2 gap-x-12 gap-y-2 text-white font-montserrat text-sm">
-
-                <a href="#">Home</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Gallery</a>
-
-                <div></div>
-                <a href="blog.html">Blog</a>
-                <div></div>
-
-                <div class="col-span-2 flex gap-2 mt-4">
-                    <img class="w-6 h-6 invert grayscale brightness-50" src="images-icons/youtubeicon2.png">
-                    <img class="w-6 h-6 invert grayscale brightness-50" src="images-icons/facebookicon.png">
-                    <img class="w-6 h-6 invert grayscale brightness-50" src="images-icons/twittericon.png">
-                    <img class="w-6 h-6 invert grayscale brightness-50" src="images-icons/instagramicon.png">
-                    <img class="w-6 h-6 invert grayscale brightness-50" src="images-icons/linkedinicon.png">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <div class="flex items-center gap-3">
+                    <img class="w-10 md:w-16" src="images-icons/logo.png" alt="Tech Urban Logo">
+                    <h1 class="text-3xl md:text-5xl font-baloo font-bold text-white">tech urban</h1>
                 </div>
+                <p class="text-base md:text-lg font-montserrat mt-2 md:ml-16 text-yellowsome">
+                    Connect. Innovate. Grow
+                </p>
             </div>
+
+            <div class="flex flex-col items-center md:items-end text-center md:text-right">
+
+                <div
+                    class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-white font-montserrat text-sm md:text-base">
+                    <a href="#" class="hover:text-yellowsome transition-colors">Home</a>
+                    <a href="#" class="hover:text-yellowsome transition-colors">Gallery</a>
+                    <a href="blog.html" class="hover:text-yellowsome transition-colors">Blog</a>
+                    <a href="#" class="hover:text-yellowsome transition-colors">Contact Us</a>
+                </div>
+
+                <div class="flex gap-4 mt-6">
+                    <img class="w-6 h-6 invert grayscale brightness-50 hover:brightness-100 transition"
+                        src="images-icons/youtubeicon2.png" alt="YouTube">
+                    <img class="w-6 h-6 invert grayscale brightness-50 hover:brightness-100 transition"
+                        src="images-icons/facebookicon.png" alt="Facebook">
+                    <img class="w-6 h-6 invert grayscale brightness-50 hover:brightness-100 transition"
+                        src="images-icons/twittericon.png" alt="Twitter">
+                    <img class="w-6 h-6 invert grayscale brightness-50 hover:brightness-100 transition"
+                        src="images-icons/instagramicon.png" alt="Instagram">
+                    <img class="w-6 h-6 invert grayscale brightness-50 hover:brightness-100 transition"
+                        src="images-icons/linkedinicon.png" alt="LinkedIn">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 my-8"></div>
+
+        <div class="text-center">
+            <p class="text-xs md:text-sm font-montserrat text-gray-400">
+                © 2023 Tech Urban Conference. All rights reserved.
+            </p>
         </div>
     </footer>
 
 
+    <script src="app.js" defer></script>
 </body>
 
 </html>
